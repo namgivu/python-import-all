@@ -1,4 +1,5 @@
 ##region auto-import the module files in this package folder
+packagePath='auto_package_shortVar'
 
 #list all modules ie. *.py files
 from os.path import dirname, basename, isfile
@@ -10,7 +11,7 @@ import importlib
 for f in fileALL:
   if isfile(f) and not f.endswith('__init__.py'):
     moduleName = basename(f)[:-3]
-    modulePath = 'auto_package.%s' % moduleName
+    modulePath = '%s.%s' % (packagePath, moduleName)
     mdl = importlib.import_module(modulePath)
 
     ##region make referenced variables shorten
