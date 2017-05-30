@@ -11,20 +11,8 @@ for f in fileALL:
     modulePath = 'auto_package.%s' % moduleName
     mdl = importlib.import_module(modulePath)
 
-    ##region make referenced variables shorten
-
-    """ref. https://stackoverflow.com/a/31306598/248616"""
-
-    #determine a list of names to copy to the current name space
-    names = getattr(mdl, '__all__', [n for n in dir(mdl) if not n.startswith('_')])
-
-    #copy those names into the current name space
-    g = globals()
-    for name in names:
-      g[name] = getattr(mdl, name)
-
-    pass
-    ##endregion make referenced variables shorten
+    #make referenced variables shorten ref. https://stackoverflow.com/questions/14071135/import-file-using-string-as-name/14071252?noredirect=1#comment75519547_14071252
+    globals().update(mdl.__dict__)
 
 
 pass
