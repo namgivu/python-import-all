@@ -11,4 +11,5 @@ for f in fileALL:
     modulePath = 'auto_package.%s' % moduleName
     importlib.import_module(modulePath)
 
+pass
 #Above code can be made tiny in auto_app_tiny.py
