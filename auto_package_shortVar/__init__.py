@@ -31,3 +31,9 @@ for f in fileALL:
 
 pass
 ##endregion auto-import the module files in this package folder
+
+"""
+NOTE about reference to variables/methods defined in other package 
+- If reference declared IN sub-modules in this package, they only visible WITHIN that sub-module   
+- If reference declared HERE ie. __init__.py file, they are VISIBLE to outer code when they call 'from $THIS_MODULE import *'   
+"""
