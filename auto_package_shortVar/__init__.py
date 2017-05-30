@@ -1,12 +1,15 @@
 ##region auto-import the module files in this package folder
 packagePath='auto_package_shortVar'
 
+"""list to import ref. https://stackoverflow.com/a/1057534/248616"""
+
 #list all modules ie. *.py files
 from os.path import dirname, basename, isfile
 import glob
 fileALL = glob.glob(dirname(__file__) + "/*.py")
 
 #import those modules
+"""import from string value ref. https://stackoverflow.com/a/8719100/248616"""
 import importlib
 for f in fileALL:
   if isfile(f) and not f.endswith('__init__.py'):
