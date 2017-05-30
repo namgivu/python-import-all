@@ -1,3 +1,5 @@
+##region auto-import the module files in this package folder
+
 #list all modules ie. *.py files
 from os.path import dirname, basename, isfile
 import glob
@@ -27,4 +29,4 @@ for f in fileALL:
     ##endregion make referenced variables shorten
 
 pass
-#Above code can be made tiny in auto_app_tiny.py
+##endregion auto-import the module files in this package folder
